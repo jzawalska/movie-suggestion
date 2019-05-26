@@ -19,8 +19,5 @@ public abstract class MovieDao implements MovieRepository {
 //        return
 //    }
 
-    @Override
-    public <S extends Movie> Optional<S> findOne(Example<S> example) {
-        return Optional.empty();
-    }
+
 }

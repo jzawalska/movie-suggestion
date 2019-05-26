@@ -1,42 +1,41 @@
 package com.moviesuggestion.model;
 
+import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.stereotype.Repository;
-
-import java.util.Optional;
 
 @Document(collection = "movies")
 @Repository
 public class Movie {
     @Id
-    private Optional<String> id;
+    private ObjectId _id;
     private String title;
     private String description;
 
     public Movie() {
     }
 
-    public Movie(Optional<String> id, String title, String description) {
-        this.id = id;
+    public Movie(ObjectId id, String title, String description) {
+        this._id = id;
         this.title = title;
         this.description = description;
     }
 
-    public Movie(Optional<String> id) {
-        this.id = id;
+    public Movie(ObjectId id) {
+        this._id = id;
     }
 
-    public Movie createMovieWithId(Optional<String> id) {
+    public Movie createMovieWithId(ObjectId id) {
         return new Movie(id);
     }
 
-    public Optional<String> getId() {
-        return id;
+    public String getId() {
+        return _id.toHexString();
     }
 
-    public void setId(Optional<String> id) {
-        this.id = id;
+    public void setId(ObjectId id) {
+        this._id = id;
     }
 
     public String getTitle() {
@@ -55,7 +54,7 @@ public class Movie {
         this.description = description;
     }
 
-    public Optional<Movie> getMovieById (Optional<String> movieId) {
-        return Optional.ofNullable(createMovieWithId(movieId));
+    public Movie getMovieById (ObjectId movieId) {
+        return createMovieWithId(movieId);
     }
 }

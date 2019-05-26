@@ -1,12 +1,12 @@
 package com.moviesuggestion.controller;
 
+import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 import com.moviesuggestion.model.MovieRepository;
 import com.moviesuggestion.model.Movie;
@@ -31,10 +31,10 @@ public class MovieController {
     }
 
 //    todo come back here!
-//    @RequestMapping(value = "movie/{id}", method = RequestMethod.GET)
-//    public Movie get(@PathVariable Optional<String> id) {
-//        return movieRepository.findById(id);
-//    }
+    @RequestMapping(value = "movie/{id}", method = RequestMethod.GET)
+    public Movie get(@PathVariable("id") ObjectId id) {
+        return movieRepository.findBy_id(id);
+    }
 
 //    todo
 //    @RequestMapping(value = "movie/{id}", method = RequestMethod.PUT)
@@ -42,9 +42,9 @@ public class MovieController {
 //
 //    }
 
-    @RequestMapping(value = "movie/{id}", method = RequestMethod.DELETE)
-    public void delete(@PathVariable String id) {
-        movieRepository.deleteById(id);
-    }
+//    @RequestMapping(value = "movie/{id}", method = RequestMethod.DELETE)
+//    public void delete(@PathVariable ObjectId id) {
+//        movieRepository.deleteById(id);
+//    }
 
 }
