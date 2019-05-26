@@ -11,7 +11,7 @@ public class MovieStub {
     private static Map<Long, Movie> movies = new HashMap();
     private static Long idIndex = 3L;
 
-    //populate initial wrecks
+    //populate initial movies
     static {
         Movie a = new Movie(1L, "Shrek", "A mean lord exiles fairytale creatures to the swamp of a grumpy ogre, who must go on a quest and rescue a princess for the lord in order to get his land back.");
         movies.put(1L, a);

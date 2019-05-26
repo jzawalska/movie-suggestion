@@ -1,6 +1,6 @@
 package com.moviesuggestion;
-import com.moviesuggestion.user.User;
-import com.moviesuggestion.user.UserRepository;
+import com.moviesuggestion.model.user.User;
+import com.moviesuggestion.model.user.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
