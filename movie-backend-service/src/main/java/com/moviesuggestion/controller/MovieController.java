@@ -1,6 +1,8 @@
 package com.moviesuggestion.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -22,8 +24,10 @@ public class MovieController {
     }
 
     @RequestMapping(value="movie", method = RequestMethod.POST)
-    public Movie create(@RequestBody Movie movieRequest){
-        return movieRepository.save(movieRequest);
+    @ResponseBody()
+    public ResponseEntity<Movie> create(@RequestBody Movie movieRequest){
+        Movie movie = movieRepository.save(movieRequest);
+        return new ResponseEntity<>(movie, HttpStatus.CREATED);
     }
 
 //    todo come back here!
