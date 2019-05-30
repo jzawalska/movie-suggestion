@@ -30,21 +30,22 @@ public class MovieController {
         return new ResponseEntity<>(movie, HttpStatus.CREATED);
     }
 
-//    todo come back here!
     @RequestMapping(value = "movie/{id}", method = RequestMethod.GET)
     public Movie get(@PathVariable("id") ObjectId id) {
         return movieRepository.findBy_id(id);
     }
 
-//    todo
-//    @RequestMapping(value = "movie/{id}", method = RequestMethod.PUT)
-//    public Movie update(@PathVariable String id, @RequestBody Movie movie) {
-//
-//    }
+    @RequestMapping(value = "movie/{id}", method = RequestMethod.PUT)
+    public ResponseEntity<Movie> update(@PathVariable ObjectId id, @RequestBody Movie movie) {
+        Movie editedMovie = movieRepository.findBy_id(id);
+        editedMovie.setMovieData(movie);
+        movieRepository.save(editedMovie);
+        return new ResponseEntity<>(editedMovie, HttpStatus.OK);
+    }
 
-//    @RequestMapping(value = "movie/{id}", method = RequestMethod.DELETE)
-//    public void delete(@PathVariable ObjectId id) {
-//        movieRepository.deleteById(id);
-//    }
+    @RequestMapping(value = "movie/{id}", method = RequestMethod.DELETE)
+    public void delete(@PathVariable ObjectId id) {
+        movieRepository.deleteBy_id(id);
+    }
 
 }
