@@ -57,4 +57,9 @@ public class Movie {
     public Movie getMovieById (ObjectId movieId) {
         return createMovieWithId(movieId);
     }
+
+    public void setMovieData(Movie movie){
+        setTitle(movie.getTitle());
+        setDescription(movie.getDescription());
+    }
 }
