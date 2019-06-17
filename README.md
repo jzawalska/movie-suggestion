@@ -3,7 +3,7 @@
 A simple Java, Spring Boot application for retriving and storing information about the movies. 
 
 # Table of Contents
-- [Getting Started](#Getting%20Started)
+- [Getting Started](#Getting Started)
 - [Prerequisites](#Prerequisites)
 
 ## Getting Started
