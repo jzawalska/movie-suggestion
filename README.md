@@ -40,10 +40,6 @@ $  mongod
 | POST | /movie/{movieId}| add a movie  | {{"title": "...","description": "..."}}
 | PUT    | /movie/{movieId}  | update a selected movie |
 
-## Running the tests
-
-The application contains some unit tests
-
 ## Built With
 
 * [Maven](https://maven.apache.org/) - Dependency Management
