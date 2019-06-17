@@ -3,7 +3,7 @@ angular.module('app.controllers', []).controller('MovieListController', function
 
   $scope.deleteMovie = function(movie) { // Delete a Movie. Issues a DELETE to /api/v1/movie/:id
     if (popupService.showPopup('Really delete this?')) {
-      movie.$delete(function() {
+      movies.$delete(function() {
         $scope.movies = Movie.query(); 
         $state.go('movie');
       });
