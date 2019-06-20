@@ -3,8 +3,12 @@
 A simple Java, Spring Boot application for retriving and storing information about the movies. 
 
 # Table of Contents
-- [Getting Started](#Getting%20Started)
-- [Prerequisites](#Prerequisites)
+- [Getting Started](#getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Installing](#installing)
+- [Built With](#built-with)
+- [Tests](#tests)
+- [License](#license)
 
 ## Getting Started
 
@@ -43,6 +47,10 @@ $  mongod
 ## Built With
 
 * [Maven](https://maven.apache.org/) - Dependency Management
+
+## Tests
+There are some unit tests written in Junit4 (src/test/java/com/moviesuggestion/controller).
+So as to learn the "arrange-act-assert" pattern I have created a mock and covered the MovieStub class methods by tests (src/main/java/com/moviesuggestion/controller/MovieStub.java) 
 
 ## License
 
