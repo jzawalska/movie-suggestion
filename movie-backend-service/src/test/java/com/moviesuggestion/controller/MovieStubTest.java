@@ -1,12 +1,10 @@
 package com.moviesuggestion.controller;
 
-import com.moviesuggestion.model.Movie;
 import org.junit.Test;
 import org.junit.jupiter.api.DisplayName;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
 
 
 public class MovieStubTest {
