@@ -1,4 +1,4 @@
-package com.moviesuggestion.model.user;
+package com.moviesuggestion.user;
 
 import org.springframework.data.annotation.Id;
 
