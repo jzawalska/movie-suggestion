@@ -5,8 +5,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
-//Arrange, Act, Assert
 public class MovieStubMock {
     private static Map<Long, Movie> movies = new HashMap<>();
     private static Long idIndex = 0L;
